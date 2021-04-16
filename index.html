@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/test.css">
+    <link rel="stylesheet" href="assets/fonts/themify-icons/themify-icons.css">
+    <link rel="stylesheet/less" type="text/css" href="assets/css/style.less" />
+    <link rel="stylesheet/less" type="text/css" href="assets/css/base.less">
+    <script src="less.js-master/dist/less.js" type="text/javascript"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="logo-area">
+            <div class="logo-img">
+                <a href="">
+                    <img src="assets/img/Consumers_International_logo.svg.png" alt="">
+                </a>
+            </div>
+            <div class="logo-domain">
+                <h1><a href="">documents.edu.vn</a></h1>
+            </div>
+        </div>
+        <div class="navigation-area">
+            <nav>
+                <ul>
+                    <li><a href="">Case 1</a>
+                        <div class="arrow-up cent"></div>
+                        <nav class="subNavigation-area" >
+                            <ul class='subNav'>
+                                <li><a href="">Misc 1</a></li>
+                            </ul>
+                        </nav>
+                    </li>
+                    <li><a href="">Case 2</a>
+                        <div class="arrow-up cent"></div>
+                        <nav class="subNavigation-area" >
+                            <ul class='subNav'>
+                                <li><a href="">Misc 1</a></li>
+                                <li><a href="">Misc 2</a></li>
+                            </ul>
+                        </nav>
+                    </li>
+                    <li><a href="">Case 3
+                        <i class="ti-angle-down"></i>
+                    </a>
+                        <div class="arrow-up cent"></div>
+                        <nav class="subNavigation-area" >
+                            <ul class='subNav'>
+                                <li><a href="">Misc 1</a></li>
+                                <li><a href="">Misc 2</a></li>
+                                <li><a href="">Misc 3</a></li>
+                            </ul>
+                        </nav>
+                    </li>
+                    <li><a href="">Case 4
+                        <i class="ti-angle-down"></i>
+                    </a>
+                        <div class="arrow-up cent"></div>
+                        <nav class="subNavigation-area" >
+                            <ul class='subNav'> 
+                                <li><a href="">Misc 1</a></li>
+                                <li><a href="">Misc 2</a></li>
+                                <li><a href="">Misc 3</a></li>
+                                <li><a href="">Misc 3</a></li>
+                            </ul>
+                        </nav>
+                    </li>
+                    <li>
+                        <a href="">More  
+                            <i class="ti-angle-down"></i>
+                        </a>
+                        <div class="arrow-up aft"></div>
+                        <nav class="subNavigation-area" >
+                            <ul class='subNav'>
+                                <li><a href="">Misc 1</a></li>
+                                <li><a href="">Misc 2</a></li>
+                                <li><a href="">Misc 3</a></li>
+                                <li><a href="">Misc 3</a></li>
+                                <li><a href="">Misc 3</a></li>
+                            </ul>
+                        </nav>
+                    </li>
+                    <li>
+                        <a href="">More  
+                            <i class="ti-angle-down"></i>
+                        </a>
+                        <div class="arrow-up aft"></div>
+                        <nav class="subNavigation-area" >
+                            <ul class='subNav'>
+                                <li><a href="">Misc 1</a></li>
+                                <li><a href="">Misc 2</a></li>
+                                <li><a href="">Misc 3</a></li>
+                                <li><a href="">Misc 3</a></li>
+                                <li><a href="">Misc 3</a></li>
+                                <li><a href="">Misc 3</a></li>
+                                <li><a href="">Misc 3</a></li>
+                            </ul>
+                        </nav>
+                    </li>
+                </ul>
+            </nav>
+            <script>
+                var getNavCount = document.getElementsByClassName('subNav')
+                var maxLength = 0;
+                var listLength = 0;
+                for (var i= 0; i < getNavCount.length; i++){
+                    listLength =getNavCount[i].getElementsByTagName('li')
+                    var arr = [];
+                    arr.push(listLength)
+                    var inArr = arr.concat(arr[i])
+                    console.log(inArr)
+                }
+                var array = [267, 306, 108];
+                var largest = Math.max.apply(Math, array); // 306
+                console.log(largest)
+            </script>
+        </div>
+        <div class="search-area">
+            <div class="search-img">
+                <a>
+                    <button onclick="getButton()" onmouseover="Return()" class="ti-search"></button>
+                    <div class="search-box" id="spawn-text-box" style="display: none;">
+                        <input type="text" id="text-box" /> 
+                        <button id="button">Find</button>
+                    </div>
+                </a>
+            </div>
+            <script>
+                var isTextboxGet = document.getElementById('spawn-text-box');
+                var isReturnResult = document.getElementById('button');
+                function getButton() {
+                    if (isTextboxGet.style.display === 'none') {
+                        isTextboxGet.style.display = 'block';
+                    } else{
+                        isTextboxGet.style.display = 'none';
+                    }
+                }
+                function Return() {
+                    if (isReturnResult.style.backgroundColor === 'rgb(209, 209, 209)') {
+                        return isReturnResult.style.backgroundColor = 'red';
+                    } else {
+                        return true
+                    }
+                } 
+            </script>
+        </div>
+    </div>
+    <div id="main">
+
+    </div>
+
+    
+</body>
+</html>
